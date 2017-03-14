@@ -23,6 +23,6 @@ public class CountActivity extends AppCompatActivity {
         wordArray.addString(input);
 
         wordCount = (TextView)findViewById(R.id.word_count);
-        wordCount.setText("Word frequency: " + wordArray.mapCount());
+        wordCount.setText("Word frequency: \n" + wordArray.mapCount());
     }
 }

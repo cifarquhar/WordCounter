@@ -54,11 +54,13 @@ public class Counter {
     }
 
     public String mapCount(){
+        String outputString = "";
         for (String word: frequencyCounter.keySet()){
             Integer count = frequencyCounter.get(word);
-            return (word + ": " + count.toString());
+            String countToAdd =  "\"" + word + "\"" + ": " + count.toString() + "," + "\n";
+            outputString = outputString + countToAdd;
         }
-        return null;
+        return outputString;
     }
 
 }
