@@ -30,4 +30,10 @@ public class CounterTest {
         assertEquals(1,wordArray.countWords());
     }
 
+    @Test
+    public void canAddStringToList(){
+        wordArray.addString("Hello world this is a test");
+        assertEquals(6,wordArray.countWords());
+    }
+
 }
