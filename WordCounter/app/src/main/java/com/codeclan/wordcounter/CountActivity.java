@@ -21,9 +21,8 @@ public class CountActivity extends AppCompatActivity {
 
         wordArray = new Counter();
         wordArray.addString(input);
-        int words = wordArray.countWords();
 
         wordCount = (TextView)findViewById(R.id.word_count);
-        wordCount.setText("There are " + words + " words in that phrase." );
+        wordCount.setText("Word frequency: " + wordArray.mapCount());
     }
 }
