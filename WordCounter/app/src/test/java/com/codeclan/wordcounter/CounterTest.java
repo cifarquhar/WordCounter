@@ -30,16 +30,22 @@ public class CounterTest {
         assertEquals(1,wordArray.countWords());
     }
 
-    @Test
-    public void canAddStringToList(){
-        wordArray.addString("Hello world this is a test");
-        assertEquals(6,wordArray.countWords());
-    }
+//    @Test
+//    public void canAddStringToList(){
+//        wordArray.addString("Hello world this is a test");
+//        assertEquals(6,wordArray.countWords());
+//    }
+//
+//    @Test
+//    public void canGetWordCount(){
+//        int testCount = wordArray.getWordCount("Hello world this is a test");
+//        assertEquals(6,testCount);
+//    }
 
     @Test
-    public void canGetWordCount(){
-        int testCount = wordArray.getWordCount("Hello world this is a test");
-        assertEquals(6,testCount);
+    public void canMapFrequency(){
+        wordArray.addString("Test");
+        assertSame(1,wordArray.frequencyCounter.get("Test"));
     }
 
 }

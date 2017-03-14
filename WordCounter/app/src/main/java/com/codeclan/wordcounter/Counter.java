@@ -2,6 +2,7 @@ package com.codeclan.wordcounter;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by user on 14/03/2017.
@@ -10,9 +11,11 @@ import java.util.ArrayList;
 public class Counter {
 
     private ArrayList<String> wordList;
+    public HashMap<String,Integer> frequencyCounter;
 
     public Counter() {
         wordList = new ArrayList<String>();
+        frequencyCounter = new HashMap<String,Integer>();
     }
 
 
@@ -24,16 +27,30 @@ public class Counter {
         wordList.add(word);
     }
 
-    public void addString(String string) {
-        String[] splitWords = string.split(" ");
-        for (int i = 0; i < splitWords.length; i++) {
-                addWord(splitWords[i]);
-            }
-        }
+//    public void addString(String string) {
+//        String[] splitWords = string.split(" ");
+//        for (int i = 0; i < splitWords.length; i++) {
+//                addWord(splitWords[i]);
+//            }
+//        }
 
     public int getWordCount(String string) {
         addString(string);
         int wordCount = countWords();
         return wordCount;
     }
+
+    public void addString(String string) {
+        String[] splitWords = string.split(" ");
+        for (int i = 0; i < splitWords.length; i++){
+            Integer count = frequencyCounter.get(splitWords[i]);
+            if (count == null){
+                frequencyCounter.put(splitWords[i],1);
+            }
+            else {
+              frequencyCounter.put(splitWords[i],count+1);
+            }
+        }
+    }
+
 }
