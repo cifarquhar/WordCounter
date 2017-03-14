@@ -15,12 +15,15 @@ public class Counter {
         wordList = new ArrayList<String>();
     }
 
-    public ArrayList<String> showWordList(){
-        return wordList;
-    }
+//    public ArrayList<String> showWordList(){
+//        return wordList;
+//    }
 
     public int countWords(){
         return wordList.size();
     }
 
+    public void addWord(String word) {
+        wordList.add(word);
+    }
 }

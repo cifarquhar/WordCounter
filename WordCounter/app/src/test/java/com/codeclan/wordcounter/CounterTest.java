@@ -24,4 +24,10 @@ public class CounterTest {
         assertEquals(0,wordArray.countWords());
     }
 
+    @Test
+    public void canAddWordToList(){
+        wordArray.addWord("Test");
+        assertEquals(1,wordArray.countWords());
+    }
+
 }
