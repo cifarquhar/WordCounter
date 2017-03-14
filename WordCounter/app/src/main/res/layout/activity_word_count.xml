@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.codeclan.wordcounter.WordCount">
+    tools:context="com.codeclan.wordcounter.WordCountActivity">
 
 
     <EditText
-        android:id="@+id/string_to-split"
+        android:id="@+id/string_to_split"
         android:textSize="24dp"
         android:hint="Enter phrase:"
         android:layout_margin="50dp"
