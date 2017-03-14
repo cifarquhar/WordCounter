@@ -36,4 +36,10 @@ public class CounterTest {
         assertEquals(6,wordArray.countWords());
     }
 
+    @Test
+    public void canGetWordCount(){
+        int testCount = wordArray.getWordCount("Hello world this is a test");
+        assertEquals(6,testCount);
+    }
+
 }

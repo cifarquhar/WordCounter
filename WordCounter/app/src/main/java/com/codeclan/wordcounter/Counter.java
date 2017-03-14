@@ -33,4 +33,10 @@ public class Counter {
                 addWord(splitWords[i]);
             }
         }
+
+    public int getWordCount(String string) {
+        addString(string);
+        int wordCount = countWords();
+        return wordCount;
+    }
 }
